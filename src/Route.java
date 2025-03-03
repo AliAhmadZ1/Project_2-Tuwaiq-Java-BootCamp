@@ -43,4 +43,12 @@ public class Route {
     //methods
 
 
+
+    public String display() {
+        return "Route{" +
+                "trip_price=" + trip_price +
+                ", start_point='" + start_point + '\'' +
+                ", destination_point='" + destination_point + '\'' +
+                '}';
+    }
 }

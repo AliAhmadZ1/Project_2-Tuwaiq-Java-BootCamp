@@ -44,16 +44,22 @@ public abstract class Passenger {
     }
 
     //methods
+    public boolean discountUsed(){
+        if (getTrip_cost()==new Route().getTrip_price())
+            return false;
+        else
+            return true;
+    }
 
    public abstract void reserveCar(Car car);
 
-    @Override
-    public String toString() {
-        return "Passenger{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
-                ", reserved=" + reserved +
-                ", trip_cost=" + trip_cost +
-                '}';
+
+    public String display() {
+        return "Passenger: \n" +
+                "name= " + name +
+                ", id= " + id +
+//                ", reserved=" + reserved.display() +
+                ", reserved=" + getReserved().getName() +
+                ", trip_cost=" + trip_cost;
     }
 }

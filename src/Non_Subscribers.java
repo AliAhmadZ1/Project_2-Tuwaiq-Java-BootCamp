@@ -1,15 +1,37 @@
 public class Non_Subscribers extends Passenger {
 
+    private boolean coupon;
+
     //constructors
     public Non_Subscribers() {
+    }
+
+    public Non_Subscribers(boolean coupon) {
+        this.coupon = coupon;
     }
 
     public Non_Subscribers(String name, String id, Car reserved, double trip_cost) {
         super(name, id, reserved, trip_cost);
     }
 
+    public Non_Subscribers(String name, String id, Car reserved, double trip_cost, boolean coupon) {
+        super(name, id, reserved, trip_cost);
+        this.coupon = coupon;
+    }
+
+    //getter - accessor
+    public boolean isCoupon() {
+        return coupon;
+    }
+
+    //setter - mutator
+    public void setCoupon(boolean coupon) {
+        this.coupon = coupon;
+    }
+
+    //methods
     public boolean discountCoupon() {
-        return this.getId().equals("coupon");
+        return coupon;
     }
 
     @Override
@@ -25,12 +47,12 @@ public class Non_Subscribers extends Passenger {
             } else
                 throw new Exception();
         } catch (Exception e) {
-            System.out.println("the capacity is full.");
+            System.out.println("The car is max of passengers!!");
         }
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " Non - Subscriber";
+    public String display() {
+        return super.display() + " Non - Subscriber" + String.format(discountCoupon() ? " with a coupon discount 10%%" : "");
     }
 }

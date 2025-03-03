@@ -19,13 +19,13 @@ public class Subscribers extends Passenger{
             } else
                 throw new Exception();
         }catch (Exception e){
-            System.out.println("the capacity is full.");
+            System.out.println("The car is max of passengers!!");
         }
     }
 
     @Override
-    public String toString() {
-        return super.toString()+ " Subscriber";
+    public String display() {
+        return super.display()+ " Subscriber";
     }
 
 
