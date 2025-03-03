@@ -1,5 +1,13 @@
 public class Non_Subscribers extends Passenger {
 
+    //constructors
+    public Non_Subscribers() {
+    }
+
+    public Non_Subscribers(String name, String id, Car reserved, double trip_cost) {
+        super(name, id, reserved, trip_cost);
+    }
+
     public boolean discountCoupon() {
         return this.getId().equals("coupon");
     }

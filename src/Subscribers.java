@@ -1,5 +1,14 @@
 public class Subscribers extends Passenger{
 
+
+    //constructors
+    public Subscribers() {
+    }
+    public Subscribers(String name, String id, Car reserved, double trip_cost) {
+        super(name, id, reserved, trip_cost);
+    }
+
+
     @Override
     public void reserveCar(Car car){
         try {

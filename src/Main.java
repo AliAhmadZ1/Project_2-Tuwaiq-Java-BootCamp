@@ -23,14 +23,11 @@ public class Main {
         Car c2 = new Car(r1,6);
         Car c3 = new Car(r2,0);
 
-        Passenger p1 = new Subscribers();
-        Passenger p2 = new Subscribers();
-        Passenger p3 = new Non_Subscribers();
-        Passenger p4 = new Non_Subscribers();
+        Passenger p1 = new Subscribers("Ali","111",c2,24);
+        Passenger p2 = new Subscribers("Ahmed","112",c1,28);
+        Passenger p3 = new Non_Subscribers("Omar","113",c3,34);
+        Passenger p4 = new Non_Subscribers("Zaidan","114",c2,26);
 
-        p1.setId("123");
-        p1.setName("Ali");
-        p1.setTrip_cost(p1.getTrip_cost());
         System.out.println(p1.getTrip_cost());
         Passenger[] p= {p1,p3};
 
