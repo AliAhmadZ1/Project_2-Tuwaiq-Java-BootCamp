@@ -23,18 +23,18 @@ public class Main {
         Car c2 = new Car(r1,6);
         Car c3 = new Car(r2,0);
 
-        Passenger p1 = new Subscribers("Ali","111",c2,24);
-        Passenger p2 = new Subscribers("Ahmed","112",c1,28);
+        Passenger p1 = new Subscribers("Ali","111",c2,r1.getTrip_price());
+        Passenger p2 = new Subscribers("Ahmed","112",c1,r2.getTrip_price());
         Passenger p3 = new Non_Subscribers("Omar","113",c3,34);
-        Passenger p4 = new Non_Subscribers("Zaidan","114",c2,26);
+        Passenger p4 = new Non_Subscribers("Zaidan","coupon",c2,26);
 
         System.out.println(p1.getTrip_cost());
         Passenger[] p= {p1,p3};
 
         p1.reserveCar(c1);
-        p2.reserveCar(c3);
-        p4.reserveCar(c1);
-        p3.reserveCar(c1);
+        p2.reserveCar(c2);
+        p4.reserveCar(c2);
+        p3.reserveCar(c2);
 
         System.out.println(p1.toString());
         System.out.println(p2.toString());
